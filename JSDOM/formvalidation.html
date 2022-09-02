@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- JS Validation Automatic -->
+    <form name="form2">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <input type="submit" values="Submit">
+    </form>
+
+    <form onsubmit="checkForm()" name="form1">
+        <input type="text" placeholder="Enter Your Name" name="userName">
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <script>
+        function checkForm(){
+            let x=document.forms['form1']['userName'].value;
+            if(x==""){
+                alert("Enter Your Name");
+            }
+        }
+    </script>
+</body>
+</html>
